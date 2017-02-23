@@ -70,6 +70,7 @@ public class Configurador extends WebMvcConfigurerAdapter {
         return new OpenEntityManagerInViewInterceptor();
     }
 
+    //Deixando o entity manager aberto até o final da requisição
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addWebRequestInterceptor(getOpenEntityManagerInViewInterceptor());
