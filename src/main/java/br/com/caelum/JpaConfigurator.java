@@ -24,7 +24,7 @@ public class JpaConfigurator {
 	    dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 	    dataSource.setUrl("jdbc:mysql://localhost/projeto_jpa");
 	    dataSource.setUsername("root");
-	    dataSource.setPassword("pallet0605");
+	    dataSource.setPassword("root");
 
 	    return dataSource;
 	}

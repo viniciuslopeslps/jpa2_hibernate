@@ -35,8 +35,11 @@ public class Produto {
 	@Valid
 	@ManyToOne
 	private Loja loja;
-	
-	
+
+	//usando o lock otimista
+	@Version
+	private int versao;
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -99,5 +102,13 @@ public class Produto {
 
 	public void setCategorias(List<Categoria> categorias) {
 		this.categorias = categorias;
+	}
+
+	public int getVersao() {
+		return versao;
+	}
+
+	public void setVersao(int versao) {
+		this.versao = versao;
 	}
 }
